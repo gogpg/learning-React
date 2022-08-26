@@ -1,12 +1,12 @@
 
-import './App.css';
-
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
+        
       <header className="App-header">
-          
+      <h1>STATE</h1>
       </header>
     </div>
   );

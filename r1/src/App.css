@@ -34,5 +34,51 @@
   }
   to {
     transform: rotate(360deg);
-  }
+  } 
 }
+
+.dog {
+  font-size: 20px;
+}
+
+.cat {
+  font-size: 100px;
+}
+
+h2.font {
+  font-size: 80px;
+}
+
+.container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container div {
+  width: 200px;
+  height: 200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  color: coral;
+  margin: 5px;
+
+}
+
+.container .red {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: coral;
+  margin: 5px;
+
+}
+
+

@@ -57,14 +57,15 @@ h2.font {
 }
 
 .container div {
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
   display:flex;
   justify-content: center;
   align-items: center;
   background-color: skyblue;
   color: coral;
   margin: 5px;
+  /*visibility: hidden;*/
 
 }
 
@@ -118,6 +119,7 @@ button {
     }
   }
 }
+
 
 
 

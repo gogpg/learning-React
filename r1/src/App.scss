@@ -98,7 +98,7 @@ button {
   justify-content: center;
   letter-spacing: .04em;
   line-height: 16px;
-  margin: 0;
+  margin: 10;
   padding: 18px 18px;
   text-align: center;
   text-decoration: none;
@@ -118,6 +118,11 @@ button {
       padding: 18px 34px;
     }
   }
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
 }
 
 

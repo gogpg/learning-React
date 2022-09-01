@@ -1,15 +1,17 @@
-
 import './App.scss';
+import Squares from './Components/006/Squares';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Start</h1> 
 
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+            
+            <Squares />
+            </header>
+        </div>
+    );
 }
 
 export default App;

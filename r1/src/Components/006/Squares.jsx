@@ -56,11 +56,21 @@ function Squares() {
         setSq(s => s.map((square, i) => i < 5 ? {...square, show: true} : {...square, show: false}));
     }
 
+    // 1. variantas sortinimo i abi puses, kai nera nuadojamos pries tai buvusios funkcijos.
+
+    // const sort2 = () => {
+    //     setSq(s => [...s].sort((a, b) => sort * (a.number - b.number)));
+    //     setSort(s => s * -1);
+    // }
+
+    // 2. variantas, kai panaudojamos pries tai buvusios funkcijos.
+
     const sort2 = () => {
-        setSq(s => [...s].sort((a, b) => sort * (a.number - b.number)));
-        setSort(s => s * -1);
+        sort > 0 ? sortt() : sort1();
+        setSort(s => s * -1)
     }
-    
+
+
 
     return (
         <>

@@ -1,14 +1,12 @@
 import './App.scss';
-import Squares from './Components/006/Squares';
-
+import Text from './Components/008/Text';
 
 function App() {
-
     return (
         <div className="App">
             <header className="App-header">
-            
-            <Squares />
+                <h1>FORM</h1>
+                    <Text />
             </header>
         </div>
     );

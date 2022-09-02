@@ -16,6 +16,7 @@ function Select() {
     return (
         <>
         <div className="form-container">
+            <h1>Select</h1>
             <select value={select} onChange={e => setSelect(e.target.value)}>
                 <option value="1">Drakoniukas</option>
                 <option value="2">Delfinas</option>

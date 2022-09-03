@@ -12,7 +12,7 @@ function Sq() {
 
     return (
         <>
-
+        
             <div className="form-container">
                 <div className="kv" style={{backgroundColor: paint ? 'black' : 'crimson'}}></div>
                 <div>
@@ -35,7 +35,6 @@ function Sq() {
                     <label htmlFor="_16" style={{ color: cb2 ? 'crimson' : null }}>TWO</label>
                 </div>
             </div>
-            
         </>
     )
 

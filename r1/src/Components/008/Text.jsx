@@ -45,6 +45,8 @@ function Text() {
                 <button style={{marginTop: '10px'}} onClick={() => setRange(s => Math.min(100, s + 10))}>Plus</button>
                 <button style={{marginTop: '10px'}} onClick={() => setRange(s => Math.max(0, s - 10))}>Minus</button>
             </div>
+
+      
         </>
     )
 }

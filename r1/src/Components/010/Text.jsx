@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function Text({setTextNow}) {
 
-    const [text, setText] = useState('');
+    const [text, setText] = useState();
     
 
     const control = e => {

@@ -3,6 +3,8 @@ import Text from './Components/010/Text';
 import { useState } from 'react';
 import Two from './Components/010/Two';
 import Letters from './Components/010/Letters';
+import Test from './Components/010/Test';
+import Show from './Components/010/Show';
 
 function App() {
 
@@ -16,7 +18,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+
                 <h1>State Uplifting</h1>
+                
                 <h2>TEXT: {textNow}</h2>
                
                 <Text setTextNow={setTextNow} />
@@ -28,6 +32,10 @@ function App() {
 
                 <h2 style={{textTransform: 'uppercase'}}>{letters}</h2>
                 <Letters setLetters={setLetters} letters={letters}/>
+
+                <Show letters = {letters}/>
+
+                <Test />
             </header>
         </div>
     );

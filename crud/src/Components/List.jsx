@@ -13,7 +13,7 @@ function List() {
             </div>
             <div className="body">
                 {
-                    things?.map(t => <Row key={t.id} thing={t} />)
+                    things?.map(t => <Row key={t.id} thing={t} />)   //daiktai mapinami, imame viena daikta ir kuriame viena eilute, kur bus atvaizduotas tas daiktas
                 }
             </div>
         </div>

@@ -8,15 +8,15 @@ function Create() {
     const [color, setColor] = useState('#000000');
     const [cs, setCs] = useState(false);
 
-    const { setCreateData } = useContext(DataContext);
+    const { setCreateData } = useContext(DataContext);  
 
-    const add = () => {
-        setCreateData({
+    const add = () => {     //daikto pridejimo funkcija, kuria desime i mygtuka, kuris yra apacioje
+        setCreateData({   ///sukuriame duomenis , itraukiame inputus
             thing,
             color,
             cs: cs ? 1 : 0
         });
-        setThing('');
+        setThing('');   //kad neliktu senu reiksmiu, po sukurimo pries tai buvusiu duomenu, inputus isvalome, i defoltines reiksmes atstatome.
         setColor('#000000')
         setCs(false);
     }
@@ -42,7 +42,7 @@ function Create() {
                     <div className="s"></div>
                 </div>
                 <div className="form">
-                    <button className="blue" onClick={add}>Make Thing</button>
+                    <button className="blue" onClick={add}>Make Thing</button>  
                 </div>
             </div>
         </div>

@@ -1,0 +1,13 @@
+.form {
+    width: calc(100% - 20px);
+    padding: 10px;
+}   select {
+    font-size: 18px;
+    color:rgb(88, 83, 79);
+    outline: none;
+    padding: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    user-select: none;
+}

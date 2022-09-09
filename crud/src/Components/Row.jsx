@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import DataContext from "./DataContext";
 
-function Row({ thing }) {
+function Row({ thing }) {    //eilute, kurioje atsivaizduos daiktas su savybemis, gauna daikto propsa
 
     const { setDeleteData, setModalData } = useContext(DataContext);
 
     return (
         <div className="row">
             <div className="content">
-                <h2>{thing.thing}</h2>
+                <h2>{thing.thing}</h2>                  {/*//atspauzdiname daikta, objektas ir jo savybe */}
                 <div className="color" style={{
                     backgroundColor: thing.color,
                     borderRadius: thing.cs ? '50%' : null

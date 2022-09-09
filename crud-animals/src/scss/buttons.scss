@@ -1,0 +1,136 @@
+
+button {
+  
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -.24px;
+  margin: 5px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: rgb(212, 202, 202);
+  box-shadow: rgb(34, 33, 33) 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+button:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+
+  
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.button-red {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -.24px;
+    margin: 5px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+  
+  &:hover {
+    background-color: rgb(242, 156, 156);
+    box-shadow: rgb(67, 22, 22) 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  &:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button-red {
+      font-size: 1.5rem;
+      padding: 0.75rem 2rem;
+    }
+  }
+}
+
+.button-green {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -.24px;
+    margin: 5px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+ 
+    
+    &:hover {
+        background-color: rgb(148, 217, 148);
+        box-shadow: rgb(10, 22, 10) 0 -6px 8px inset;
+        transform: scale(1.125);
+    }
+    
+    &:active {
+        transform: scale(1.025);
+    }
+    
+    @media (min-width: 768px) {
+        .button-green {
+        font-size: 1.5rem;
+        padding: 0.75rem 2rem;
+        }
+    }
+}

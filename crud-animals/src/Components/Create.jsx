@@ -12,7 +12,7 @@ function Create() {
                     <div className="form">
                         <label>Animal</label>
                         <select >
-                            <option selected>Select an animal</option>
+                            <option selected>Select an animal...</option>
                             <option value="1">Antelope</option>
                             <option value="2">Duck</option>
                             <option value="3">Sheep</option>
@@ -21,6 +21,8 @@ function Create() {
                         
                             <label>Weight</label>
                             <input type="number"></input>
+
+                            <button>Add</button>
                         
                     </div>
                 </div>

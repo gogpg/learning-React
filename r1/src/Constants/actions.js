@@ -1,2 +1,11 @@
-export const ADD_ONE = 1;
-export const REMOVE_ONE = 2;
+export const ADD_ONE = 1;      //iseksportuojam constantas, cia yra tipai. Action tipai sakys, ka jos tos konstantos turi daryti.
+export const REMOVE_ONE = 2;  //konstantos rasomos vien tik is dideliu raidziu
+export const ADD_TWO = 3;
+export const REMOVE_TWO = 4; 
+export const ADD_FIVE = 5;
+export const REMOVE_FIVE = 6;
+export const RAND_COL = 7;
+export const FONT_SIZE = 8;
+export const BORDER = 9;
+export const ADD_SQ = 10;
+export const REM_SQ = 11;

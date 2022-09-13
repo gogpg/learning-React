@@ -1,5 +1,5 @@
 
-import { ADD_ONE, REMOVE_ONE, ADD_TWO, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COL, FONT_SIZE, BORDER, ADD_SQ, REM_SQ } from '../Constants/actions';
+import { ADD_ONE, REMOVE_ONE, ADD_TWO, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COL, FONT_SIZE, BORDER, ADD_SQ, REM_SQ} from '../Constants/actions';
                           ///funkciju rinkinys, kurios gamina action objektus
 export function add1() {
     return {
@@ -66,3 +66,4 @@ export function remSq() {
         type: REM_SQ
     }
 }
+

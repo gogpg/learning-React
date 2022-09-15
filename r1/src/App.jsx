@@ -1,7 +1,5 @@
 import './App.scss';
-import Color3 from './Components/017/Color3';
-import Number from './Components/017/Number';
-import Ten from './Components/017/Ten';
+import Api1 from './Components/018/Api1';
 
 
 
@@ -10,10 +8,8 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-            <h1>UseReducer</h1>
-            <Color3/>
-            <Number/>
-            <Ten/>
+            <h1>API CALL</h1>
+            <Api1/>
             </header>
         </div>
     );

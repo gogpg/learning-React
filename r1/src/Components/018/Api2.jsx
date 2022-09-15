@@ -16,14 +16,15 @@ function Api2() {
         axios.get('https://jsonplaceholder.typicode.com/posts')  //kreipiames i axios, kad gautume duomenis is norimo adreso/serverio, kuri ir irasome skliausteliuose
         .then(res => {                                           //kai gauna atsakyma, tada setina i users, atsakymas yra su daug nereikalingos papildomos info, todel is to responso paimame tik data.
             console.log(res);
-            setPosts(res.data.sort((a, b) => b.title.length - a.title.length));    
+            setPosts(res.data.sort((a, b) => b.title.length - a.title.length));
+              
         })
     }, []);
 
     return (
         <ul>
             {
-                posts.map(u => <li key = {u.id}>Users title: {u.title}</li>)    
+                posts.map(u => <li key = {u.id} style={{color: u.title.length < 50 ? 'red' : null}} >Users title: {u.title}</li>)    
             }
         </ul>
     )

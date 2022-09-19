@@ -523,6 +523,40 @@ h2.h2 {
   
 }
 
+.left {
+  position: absolute;
+  left: 80px;
+  top: -30px;
+  select {
+      width: 200px;
+      font-size: 18px;
+      padding: 5px;
+      margin: 5px 15px;
+      outline: none;
+      box-shadow: none;
+  }
+  span {
+      margin: 5px;
+      font-size: 18px;
+  }
+}
+
+.left1 {
+  position: absolute;
+  left: 400px;
+  top: -30px;
+  input {
+      width: 300px;
+      padding: 5px;
+      margin: 5px 15px;
+  }
+  span {
+      margin: 5px;
+      font-size: 18px;
+  }
+}
+
+
 .lds-ripple {
   display: inline-block;
   position: relative;

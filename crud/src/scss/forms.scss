@@ -65,4 +65,16 @@
         height: 40px;
         background-color: lightcoral;
      }
+     .cb-line {
+        span {
+            margin: 0 5px 0 0;
+            label {
+                padding: 3px 5px;
+            }
+            [type=checkbox]:checked + label {
+                color: white;
+                background-color: black;
+            }
+        }
+     }
 }

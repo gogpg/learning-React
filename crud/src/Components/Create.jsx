@@ -7,18 +7,21 @@ function Create() {
     const [thing, setThing] = useState('');
     const [color, setColor] = useState('#000000');
     const [cs, setCs] = useState(false);
+    const [texture, setTexture] = useState(0);
 
-    const { setCreateData } = useContext(DataContext);  
+    const { setCreateData, textures } = useContext(DataContext);
 
-    const add = () => {     //daikto pridejimo funkcija, kuria desime i mygtuka, kuris yra apacioje
-        setCreateData({   ///sukuriame duomenis , itraukiame inputus
+    const add = () => {
+        setCreateData({
             thing,
             color,
-            cs: cs ? 1 : 0
+            cs: cs ? 1 : 0,
+            texture
         });
-        setThing('');   //kad neliktu senu reiksmiu, po sukurimo pries tai buvusiu duomenu, inputus isvalome, i defoltines reiksmes atstatome.
+        setThing('');
         setColor('#000000')
         setCs(false);
+        setTexture(0);
     }
 
     return (
@@ -42,7 +45,20 @@ function Create() {
                     <div className="s"></div>
                 </div>
                 <div className="form">
-                    <button className="blue" onClick={add}>Make Thing</button>  
+                    <label>Texture</label>
+                    <div className="cb-line">
+                        {
+                            textures.map(t => <span key={t.id}>
+                                <input id={'c_' + t.id} type="checkbox" 
+                                checked={t.id === texture} onChange={() => setTexture(t.id)}>
+                                </input>
+                                <label htmlFor={'c_' + t.id}>{t.title}</label>
+                            </span>)
+                        }
+                    </div>
+                </div>
+                <div className="form">
+                    <button className="blue" onClick={add}>Make Thing</button>
                 </div>
             </div>
         </div>

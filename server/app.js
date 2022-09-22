@@ -1,7 +1,6 @@
-
 const express = require("express");
 const app = express();
-const port = 3003;   ///pakeiciame porta i 3003, nes norime, kad reactas veiktu 3000 ajame porte
+const port = 3003;
 const cors = require("cors");
 app.use(cors());
 const mysql = require("mysql");
@@ -13,18 +12,18 @@ app.use(
 app.use(express.json());
 
 
-const con = mysql.createConnection({   //jungimasis prie duomenu bazes
+const con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
     database: "things",
 });
 
-app.get('/', (req, res) => { 
+app.get('/', (req, res) => {
   res.send('Labas, Briedi!');
 });
 
-app.get("/labas", (req, res) => {
+app.get("/api", (req, res) => {
     const sql = `
     SELECT *
     FROM things
@@ -34,6 +33,20 @@ app.get("/labas", (req, res) => {
         res.send(result);
     });
 });
+
+app.post("/api", (req, res) => {
+    const sql = `
+    INSERT INTO things
+    (title, color, cs, texture)
+    VALUES (?, ?, ?, ?)
+    `;
+    con.query(sql, [req.body.thing, req.body.color, req.body.cs, req.body.texture], (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Bebras klauso ${port} porto`);

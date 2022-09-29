@@ -1,60 +1,44 @@
-
 import './App.scss';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import List from './Components/List';
-import Create from './Components/Create';
-import DataContext from './Components/DataContext';
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
+import MainContext from './Components/MainContext';
 
-const textures = [
-  { id: 1, title: 'Wood' },
-  { id: 2, title: 'Metal' },
-  { id: 3, title: 'Paper' },
-  { id: 4, title: 'Stone' }
-]
+import { useCallback } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './Components/Nav';
+import Home from './Components/Home';
+
+import ThingsMain from './Components/things/Main';
+import OwnersMain from './Components/owners/Main';
+import DrinksMain from './Components/drinks/Main';
+
 
 function App() {
 
-  const [things, setThings] = useState(null);
-  const [createData, setCreateData] = useState(null);
+  const [msgs, setMsgs] = useState([]);
 
-  useEffect(() => {
-    axios.get('http://localhost:3003/api')
-      .then(res => {
-        setThings(res.data);
-      });
+  const createMsg = useCallback((text, type = 'info') => {
+    const id = uuidv4();
+    setMsgs(m => [...m, { id, text, type }]);
+    setTimeout(() => setMsgs(m => m.filter(msg => msg.id !== id)), 4000);
   }, []);
 
-  useEffect(() => {
-    if (null === createData) {
-      return;
-    }
-    axios.post('http://localhost:3003/api', createData)
-      .then(res => {
-
-      })
-  }, [createData]);
-
-
-
   return (
-    <DataContext.Provider value={{
-      things,
-      textures,
-      setCreateData
-    }}>
-      <div className="container">
-        <div className="bin">
-          <div className="box-1">
-            <Create />
-            {/* <Bin /> */}
-          </div>
-          <div className="box-2">
-            <List />
-          </div>
-        </div>
-      </div>
-    </DataContext.Provider>
+    <BrowserRouter>
+      <MainContext.Provider value={{
+        createMsg,
+        msgs
+      }}>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/things" element={<ThingsMain />} />
+          <Route path="/owners" element={<OwnersMain />} />
+          <Route path="/drinks" element={<DrinksMain />} />
+        </Routes>
+
+      </MainContext.Provider>
+    </BrowserRouter>
   );
 }
 
